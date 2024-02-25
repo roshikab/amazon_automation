@@ -1,7 +1,7 @@
 import * as searchItemObj from "../../../pageObject/searchItemObj";
 
 Given('Visit Amazon url', () => {
-    cy.visit("https://www.amazon.com/")
+    cy.visit("/")
 })
 
 And('Wait for {int} ms', (time) => {
@@ -9,34 +9,19 @@ And('Wait for {int} ms', (time) => {
 })
 
 
-And('Locates the department dropdown and clicks it.', () => {
-    searchItemObj.searchForItem()
+And('Select the random option from the dropdown', () => {
+    searchItemObj.selectRandomDropdownOption()
 })
 
-And('Retrieves all the options within the dropdown.', () => {
-
+And('Input search for an Item', () => {
+    searchItemObj.inputSearchItem()
 })
 
-And('Generates a random index to select a random option.', () => {
-
-})
-
-And('Gets the text of the randomly selected option.', () => {
-
-})
-
-And('Logs the selected option.', () => {
-
+And('Click search button', () => {
+    searchItemObj.clickOnSearchIcon()
 })
 
 
-And('Selects the randomly chosen option from the dropdown.', () => {
-
-})
-
-And('Asserts that the selected option is displayed.', () => {
-
-})
 
 
 

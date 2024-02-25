@@ -1,11 +1,14 @@
+import { faker } from '@faker-js/faker';
 import formPage from "../page/formPage";
+import buttonPage from "../page/buttonPage";
 import { filePath } from "../helpers/filepath";
 
+const buttonP = new buttonPage()
 const formP = new formPage()
 const homepageJSON = filePath().homepage
 const dropdown_dataJSON = filePath().dropdown_data
 
-export function searchForItem() {
+export function selectRandomDropdownOption() {
     cy.checkAndReadFile(dropdown_dataJSON).then((data) => {
 
         let optionData = data
@@ -34,7 +37,6 @@ export function searchForItem() {
                     homepageJSONDatas.selector.searchDropdown,
                     optionData.options[randomIndex]
                 );
-                // cy.select();
                 optionData.options.splice(randomIndex, 1)
                 cy.writeFile(dropdown_dataJSON, optionData);
             })
@@ -43,4 +45,16 @@ export function searchForItem() {
     })
 }
 
+
+export function inputSearchItem() {
+    cy.checkAndReadFile(homepageJSON).then((homepageJSONDatas) => {
+        formP.enterInputFieldData(homepageJSONDatas.selector.searchInput, faker.commerce.productName())
+    })
+}
+
+export function clickOnSearchIcon() {
+    cy.checkAndReadFile(homepageJSON).then((homepageJSONDatas) => {
+        buttonP.clickButton(homepageJSONDatas.selector.searchIcon)
+    })
+}
 

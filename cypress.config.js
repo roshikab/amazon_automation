@@ -19,6 +19,7 @@ module.exports = defineConfig({
       });
     },
     specPattern: "**/searchItem.feature",
+    baseUrl: "https://www.amazon.com/"
   },
   experimentalSessionAndOrigin: true,
 })

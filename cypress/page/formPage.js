@@ -1,19 +1,20 @@
 class formPage {
-
-    enterInputField(xpath, value) {
-        cy.get(xpath)
-            .clear({ force: true })
-            .type(value, { force: true })
+    //To enter Input Field Data
+    enterInputFieldData(selector, value) {
+        cy.get(selector)
+            .clear()
+            .type(value)
             .should("have.value", value)
             .wait(500)
     }
 
     //Select from DropDown with Option 
-    selectFromOption(xpath, value) {
-        cy.get(xpath)
+    selectFromOption(selector, value) {
+        cy.get(selector)
             .select(value, { force: true })
             .wait(500);
     }
+
 }
 
 export default formPage
