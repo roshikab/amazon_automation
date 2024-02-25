@@ -1,0 +1,11 @@
+{
+    "selector": {
+        "searchDropdown": "select[id='searchDropdownBox']",
+        "searchInput": "input[id='twotabsearchtextbox']",
+        "searchButton": ""
+    },
+    "value": {
+        "searchDropdown": "Books",
+        "searchInput": "Book"
+    }
+}

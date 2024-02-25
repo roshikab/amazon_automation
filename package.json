@@ -1,0 +1,27 @@
+{
+  "name": "amazon_automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roshikab/amazon_automation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roshikab/amazon_automation/issues"
+  },
+  "homepage": "https://github.com/roshikab/amazon_automation#readme",
+  "dependencies": {
+    "cypress": "^13.6.6",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "step_definitions": "cypress/e2e/"
+  }
+}
