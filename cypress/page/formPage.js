@@ -15,9 +15,17 @@ class formPage {
             .wait(500);
     }
 
+    //Assert that element has the expected text content.
     verifyText(selector, value) {
         cy.get(selector)
             .should('have.text', value)
+            .wait(500)
+    }
+
+    //Assert that the element is visible
+    verifyElementVisibility(selector) {
+        cy.get(selector)
+            .should('be.visible')
             .wait(500)
     }
 

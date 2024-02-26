@@ -8,9 +8,12 @@ And('Wait for {int} ms', (time) => {
     cy.wait(time);
 })
 
+And('Verify the Department Dropdown is visible', () => {
+    searchItemObj.verifyDepartmentDropdown()
+})
 
-And('Select the random option from the dropdown', () => {
-    searchItemObj.selectRandomDropdownOption()
+And('Select a random option from the department dropdown and verify the selected option', () => {
+    searchItemObj.randomSelectAndVerifyDepartmentOption()
 })
 
 And('Input search for an Item', () => {

@@ -8,7 +8,13 @@ const formP = new formPage()
 const homepageJSON = filePath().homepage
 const dropdown_dataJSON = filePath().dropdown_data
 
-export function selectRandomDropdownOption() {
+export function verifyDepartmentDropdown() {
+    cy.checkAndReadFile(homepageJSON).then((homepageJSONDatas) => {
+        formP.verifyElementVisibility(homepageJSONDatas.selector.departmentDropdownText)
+    })
+}
+
+export function randomSelectAndVerifyDepartmentOption() {
     cy.checkAndReadFile(homepageJSON).then((homepageJSONDatas) => {
         // Get the select element
         cy.get(homepageJSONDatas.selector.departmentDropdown).then(($select) => {
@@ -56,9 +62,6 @@ export function selectRandomDropdownOption() {
         });
     });
 }
-
-
-
 
 export function inputSearchItem() {
     cy.checkAndReadFile(homepageJSON).then((homepageJSONDatas) => {
