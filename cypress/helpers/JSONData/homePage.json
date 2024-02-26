@@ -1,6 +1,7 @@
 {
     "selector": {
-        "searchDropdown": "select[id='searchDropdownBox']",
+        "departmentDropdown": "select[id='searchDropdownBox']",
+        "departmentDropdownText": "span#nav-search-label-id",
         "searchInput": "input[id='twotabsearchtextbox']",
         "searchIcon": "input#nav-search-submit-button"
     }

@@ -15,6 +15,12 @@ class formPage {
             .wait(500);
     }
 
+    verifyText(selector, value) {
+        cy.get(selector)
+            .should('have.text', value)
+            .wait(500)
+    }
+
 }
 
 export default formPage
