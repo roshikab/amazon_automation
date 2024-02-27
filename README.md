@@ -27,7 +27,7 @@ This project automates the process of selecting a different dropdown option from
 
 3. You can run the Cypress automation locally to test or make adjustments:
 
-```
-npx cypress open
-npx cypress run
-```
+   ```
+   npx cypress open
+   npx cypress run
+   ```

@@ -1,6 +1,6 @@
 Feature: Amazon Search
 
-    Visit Amazon url,select a random option from the department dropdown and Search for an item
+    Visit Amazon url,select a random option from the department dropdown and search for an item
 
     Background: Preconditions
         Given Visit Amazon url
