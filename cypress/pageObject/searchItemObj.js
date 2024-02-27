@@ -1,4 +1,3 @@
-// import { faker } from '@faker-js/faker';
 import formPage from "../page/formPage";
 import buttonPage from "../page/buttonPage";
 import { filePath } from "../helpers/filepath";
