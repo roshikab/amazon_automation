@@ -5,7 +5,7 @@ import { filePath } from "../helpers/filepath";
 const buttonP = new buttonPage()
 const formP = new formPage()
 const homepageJSON = filePath().homepage
-const dropdown_dataJSON = filePath().dropdown_data
+const departmentDropdown_dataJSON = filePath().departmentDropdown
 
 export function verifyDepartmentDropdown() {
     cy.checkAndReadFile(homepageJSON).then((homepageJSONDatas) => {
@@ -29,12 +29,12 @@ export function randomSelectAndVerifyDepartmentOption() {
             };
 
             // Check if dropdown_dataJSON file exists
-            cy.checkAndReadFile(dropdown_dataJSON).then((existingData) => {
+            cy.checkAndReadFile(departmentDropdown_dataJSON).then((existingData) => {
                 let optionData;
                 if (!existingData || existingData.options.length === 0) {
                     // If the file doesn't exist or options array is empty, update optionData
                     optionData = dropdownData;
-                    cy.writeFile(dropdown_dataJSON, dropdownData);
+                    cy.writeFile(departmentDropdown_dataJSON, dropdownData);
                 } else {
                     optionData = existingData;
                 }
@@ -55,7 +55,7 @@ export function randomSelectAndVerifyDepartmentOption() {
                 optionData.options.splice(randomIndex, 1);
 
                 // Update the JSON file with the modified optionData, excluding the selected option
-                cy.writeFile(dropdown_dataJSON, optionData);
+                cy.writeFile(departmentDropdown_dataJSON, optionData);
 
             });
         });
