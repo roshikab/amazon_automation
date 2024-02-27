@@ -1,4 +1,4 @@
-import { faker } from '@faker-js/faker';
+// import { faker } from '@faker-js/faker';
 import formPage from "../page/formPage";
 import buttonPage from "../page/buttonPage";
 import { filePath } from "../helpers/filepath";
@@ -63,9 +63,9 @@ export function randomSelectAndVerifyDepartmentOption() {
     });
 }
 
-export function inputSearchItem() {
+export function inputSearchItem(itemName) {
     cy.checkAndReadFile(homepageJSON).then((homepageJSONDatas) => {
-        formP.enterInputFieldData(homepageJSONDatas.selector.searchInput, faker.commerce.productName())
+        formP.enterInputFieldData(homepageJSONDatas.selector.searchInput, itemName)
     })
 }
 
@@ -75,3 +75,8 @@ export function clickOnSearchIcon() {
     })
 }
 
+export function verifySearchResult(itemName) {
+    cy.checkAndReadFile(homepageJSON).then((homepageJSONDatas) => {
+        formP.verifyText(homepageJSONDatas.selector.searchResultText, `"` + itemName + `"`)
+    })
+}

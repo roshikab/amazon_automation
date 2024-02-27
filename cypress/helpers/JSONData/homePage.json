@@ -3,6 +3,7 @@
         "departmentDropdown": "select[id='searchDropdownBox']",
         "departmentDropdownText": "span#nav-search-label-id",
         "searchInput": "input[id='twotabsearchtextbox']",
-        "searchIcon": "input#nav-search-submit-button"
+        "searchIcon": "input#nav-search-submit-button",
+        "searchResultText": "#search span.a-color-state.a-text-bold"
     }
 }
