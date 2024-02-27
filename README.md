@@ -31,3 +31,5 @@ This project automates the process of selecting a different dropdown option from
    npx cypress open
    npx cypress run
    ```
+### Automation in Action
+![Demo]("./../demo.gif)
