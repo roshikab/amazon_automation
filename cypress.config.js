@@ -21,9 +21,9 @@ module.exports = defineConfig({
     specPattern: "**/searchItem.feature",
     baseUrl: "https://www.amazon.com/"
   },
-  experimentalSessionAndOrigin: true,
   experimentalModifyObstructiveThirdPartyCode: true,
   viewportWidth: 2000,
   viewportHeight: 1000,
   defaultCommandTimeout: 5000,
+  pageLoadTimeout: 30000,
 })
